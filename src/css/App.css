@@ -68,7 +68,7 @@ body {
 } */
 
 .ship {
-  top: 270px;
+  top: 350px;
   left: 800px;
   /* transform: scaleX(1); */
 }
@@ -81,5 +81,5 @@ body {
   width: 100%;
   position: absolute;
   text-align: center;
-  top: 775px;
+  top: 970px;
 }

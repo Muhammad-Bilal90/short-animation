@@ -6,6 +6,7 @@ import PlayArrowRoundedIcon from '@material-ui/icons/PlayArrowRounded';
 import PauseCircleFilledRoundedIcon from '@material-ui/icons/PauseCircleFilledRounded';
 import FastForwardRoundedIcon from '@material-ui/icons/FastForwardRounded';
 import FastRewindRoundedIcon from '@material-ui/icons/FastRewindRounded';
+import Button from "@material-ui/core/Button";
 import Cloud from './Images/cloud.png';
 import Ship from './Images/ship.png';
 import Cycle from './Images/cycle.gif';
@@ -154,10 +155,18 @@ function App() {
         </div>
       </div>
       <div className="button">
-        <FastRewindRoundedIcon style={{cursor: "pointer"}} onClick={slowDown}/>
-        <PlayArrowRoundedIcon  style={{cursor: "pointer"}} onClick={play}/>
-        <PauseCircleFilledRoundedIcon style={{cursor: "pointer"}} onClick={pause}/>
-        <FastForwardRoundedIcon style={{cursor: "pointer"}} onClick={speedUp}/>
+        <Button variant="outlined" onClick={slowDown}>
+          <FastRewindRoundedIcon />
+        </Button>
+        <Button onClick={play}>
+          <PlayArrowRoundedIcon />
+        </Button>
+        <Button onClick={pause}>
+          <PauseCircleFilledRoundedIcon />
+        </Button>
+        <Button onClick={speedUp}>
+          <FastForwardRoundedIcon />
+        </Button>
       </div>
     </div>
   );
