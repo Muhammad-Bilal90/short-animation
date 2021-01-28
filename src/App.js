@@ -1,7 +1,7 @@
 import './css/App.css';
 import './css/uitilities.css';
 import { useState } from "react";
-import useWebAnimations from "@wellyshen/use-web-animations";
+import useWebAnimations, { pulse } from "@wellyshen/use-web-animations";
 import PlayArrowRoundedIcon from '@material-ui/icons/PlayArrowRounded';
 import PauseCircleFilledRoundedIcon from '@material-ui/icons/PauseCircleFilledRounded';
 import FastForwardRoundedIcon from '@material-ui/icons/FastForwardRounded';
@@ -13,6 +13,7 @@ import Cycle from './Images/cycle.gif';
 
 function App() {
   const [bg, setBg] = useState(true);
+  // const { ref: sunMoon, getAnimation: sunMoonanum } = useWebAnimations({...pulse}) 
 
   const { ref: cycle, getAnimation: Cycleanum } = useWebAnimations({
     keyframes: [
@@ -26,6 +27,17 @@ function App() {
       easing: 'ease-in-out',
     }
   });
+
+  const { keyframes, timing } = pulse;
+  const { ref: sunMoon, getAnimation: sunMoonanum } = useWebAnimations({
+    keyframes,
+    timing: {
+      ...timing,
+      // delay: 1000,
+      iterations: Infinity,
+    },
+  });
+
 
   const { ref: ship, getAnimation: shipanum } = useWebAnimations({
     keyframes: [
@@ -99,6 +111,7 @@ function App() {
   const animation3 = cloud2anum();
   const animation4 = cloud3anum();
   const animation5 = shipanum();
+  const animation6 = sunMoonanum();
 
   const speedUp = () => {
     animation1.updatePlaybackRate(animation1.playbackRate * 1.1);
@@ -122,6 +135,7 @@ function App() {
     animation3.pause();
     animation4.pause();
     animation5.pause();
+    animation6.pause();
   }
 
   const play = () => {
@@ -130,9 +144,10 @@ function App() {
     animation3.play();
     animation4.play();
     animation5.play();
+    animation6.play();
   }
   return (
-    <div className={`${bg ? 'daybg' : 'nightbg'}`}>
+    <div className={`${bg ? 'daybg' : 'nightbg'}`} >
       <div className="w-64 h-64 absolute cloud1" ref={cloud1}>
         <img src={Cloud} height="100%" width="100%" alt="Cloud" />
       </div>
@@ -147,6 +162,7 @@ function App() {
       </div>
       <div
         onClick={() => setBg(!bg)}
+        ref={sunMoon}
         className={`w-32 h-32 absolute both ${bg ? 'sun' : 'moon'}`}
       ></div>
       <div className="w-full h-64 absolute bottom-0 flex justify-center">
@@ -168,7 +184,7 @@ function App() {
           <FastForwardRoundedIcon />
         </Button>
       </div>
-    </div>
+    </div >
   );
 }
 
