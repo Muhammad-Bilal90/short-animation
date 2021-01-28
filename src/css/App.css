@@ -1,0 +1,85 @@
+body {
+  overflow-x: hidden;
+}
+
+.daybg {
+  background-image: url(../Images/daybg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  z-index: -2;
+}
+
+.nightbg {
+  background-image: url(../Images/nightbg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  z-index: -2;
+}
+
+.both {
+  background-image: url(../Images/sun.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  margin: 10px;
+}
+
+.sun {
+  background-image: url(../Images/sun.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.moon {
+  background-image: url(../Images/moon.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cloud1 {
+  /* z-index: 1; */
+  top:100px;
+  right: 500px;
+}
+.cloud2 {
+  /* z-index: 1; */
+  left:400px;
+}
+.cloud3 {
+  /* z-index: 1; */
+  top:-100px;
+  left: 800px;
+}
+
+/* .sun{
+  top: 0;
+  right: 0;
+  margin: 10px;
+  background-image: url(Images/sun.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+} */
+
+.ship {
+  top: 270px;
+  left: 800px;
+  /* transform: scaleX(1); */
+}
+
+.cycle {
+  bottom: 150px;
+}
+
+.button {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  top: 775px;
+}
