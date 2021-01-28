@@ -60,7 +60,9 @@ function App() {
       { transform: "translateX(600px) rotate(-10deg)" },
       { transform: "translateX(700px) rotate(5deg)" },
       { transform: "translateX(800px) rotate(-10deg)" },
-      // { transform: "translateX(900px) rotate(5deg)" },
+      { transform: "translateX(900px) rotate(5deg)" },
+      { transform: "translateX(1000px) rotate(-10deg)" },
+      { transform: "translateX(1100px) rotate(5deg)" },
     ],
     timing: {
       duration: 40000,
@@ -71,8 +73,8 @@ function App() {
 
   const { ref: cloud1, getAnimation: cloud1anum } = useWebAnimations({
     keyframes: [
-      { transform: "translateX(1100px)" },
-      { transform: "translateX(-1100px)" },
+      { transform: "translateX(1500px)" },
+      { transform: "translateX(-1500px)" },
     ],
     timing: {
       duration: 10000,
@@ -82,8 +84,8 @@ function App() {
   });
   const { ref: cloud2, getAnimation: cloud2anum } = useWebAnimations({
     keyframes: [
-      { transform: "translateX(1100px)" },
-      { transform: "translateX(-1100px)" },
+      { transform: "translateX(1500px)" },
+      { transform: "translateX(-1500px)" },
     ],
     timing: {
       duration: 10000,
@@ -95,8 +97,8 @@ function App() {
 
   const { ref: cloud3, getAnimation: cloud3anum } = useWebAnimations({
     keyframes: [
-      { transform: "translateX(1100px)" },
-      { transform: "translateX(-1100px)" },
+      { transform: "translateX(1500px)" },
+      { transform: "translateX(-1500px)" },
     ],
     timing: {
       duration: 10000,
