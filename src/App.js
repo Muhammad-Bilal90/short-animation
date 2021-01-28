@@ -28,7 +28,6 @@ function App() {
 
   const { ref: ship, getAnimation: shipanum } = useWebAnimations({
     keyframes: [
-      { transform: "translateX(-1000px) rotate(5deg)" },
       { transform: "translateX(-900px) rotate(5deg)" },
       { transform: "translateX(-800px) rotate(-10deg)" },
       { transform: "translateX(-700px) rotate(5deg)" },
@@ -48,8 +47,7 @@ function App() {
       { transform: "translateX(600px) rotate(-10deg)" },
       { transform: "translateX(700px) rotate(5deg)" },
       { transform: "translateX(800px) rotate(-10deg)" },
-      { transform: "translateX(900px) rotate(5deg)" },
-      { transform: "translateX(1000px) rotate(5deg)" },
+      // { transform: "translateX(900px) rotate(5deg)" },
     ],
     timing: {
       duration: 40000,
