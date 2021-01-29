@@ -171,7 +171,6 @@ function App() {
         <div className="w-64 h-64 absolute cycle">
           <img src={Cycle} ref={cycle} height="100%" width="100%" alt="Cycle" />
         </div>
-      </div>
       <div className="button">
         <Button variant="outlined" onClick={slowDown}>
           <FastRewindRoundedIcon />
@@ -185,6 +184,7 @@ function App() {
         <Button onClick={speedUp}>
           <FastForwardRoundedIcon />
         </Button>
+      </div>
       </div>
     </div >
   );
